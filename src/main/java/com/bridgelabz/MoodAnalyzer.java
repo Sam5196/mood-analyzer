@@ -21,7 +21,6 @@ public class MoodAnalyzer {
     public void setMessage(String message) {
         this.message = message;
     }
-
     public String analyseMood() throws MoodAnalyzerException {
         try {
             if (message.toLowerCase().contains("happy")) {
