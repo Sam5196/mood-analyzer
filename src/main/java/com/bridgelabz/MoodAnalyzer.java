@@ -3,7 +3,7 @@ package com.bridgelabz;
 public class MoodAnalyzer {
     private String message;
 
-    public MoodAnalyzer(String message) {
+    public MoodAnalyzer(String message) throws MoodAnalyzerException {
         this.message = message;
     }
 
@@ -22,7 +22,7 @@ public class MoodAnalyzer {
         this.message = message;
     }
 
-    public String analyseMood() {
+    public String analyseMood() throws MoodAnalyzerException {
         try {
             if (message.toLowerCase().contains("happy")) {
                 return "Happy";
@@ -34,7 +34,7 @@ public class MoodAnalyzer {
                 return "Any";
             }
         } catch (NullPointerException e) {
-            return "Happy";
+            throw new MoodAnalyzerException("Exception Found");
         }
     }
 }
