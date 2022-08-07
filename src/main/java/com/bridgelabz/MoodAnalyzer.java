@@ -2,6 +2,7 @@ package com.bridgelabz;
 
 public class MoodAnalyzer {
     private String message;
+
     public MoodAnalyzer(String message) {
         this.message = message;
     }
@@ -33,9 +34,7 @@ public class MoodAnalyzer {
                 return "Any";
             }
         } catch (NullPointerException e) {
-            return "Invalid Mood";
+            return "Happy";
         }
     }
-
-
 }
